@@ -8,6 +8,7 @@ package vista;
 import datos.Carro;
 import java.util.UUID;
 import modelo.Cola;
+import datos.receptor;
 
 /**
  *

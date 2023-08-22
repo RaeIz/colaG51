@@ -54,10 +54,10 @@ public class receptor {
     }
     //el receptor se ocupa con un carro y lo atiende calculando el tiemp
     public void atenderCarro(Carro carro) {
-        ocupado = true;
-        carroAtendiendo = carro;
-       
-        
+//        ocupado = true;
+//        carroAtendiendo = carro;
+//       
+//        
         try {
             Thread.sleep(carro.getTiempoLan() * 1000);//tiempo de demora del carro las mide en milisegundos
         } catch (InterruptedException e) {
@@ -66,8 +66,13 @@ public class receptor {
         long finAtencion = System.currentTimeMillis(); // Marca el tiempo de fin de atención
         //no esta terminado 
         //long tiempoAtencion = finAtencion - inicioAtencion; // Calcula el tiempo de atención
-
-        ocupado = false;
-        carroAtendiendo = null;
+        if(finAtencion == tiempoLan){
+            ocupado = true;
+        }else{
+            ocupado = false;
+        }
+//
+//        ocupado = false;
+//        carroAtendiendo = null;
     }
 }
