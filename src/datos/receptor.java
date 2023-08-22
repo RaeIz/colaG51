@@ -53,8 +53,8 @@ public class receptor {
         return ocupado;
     }
     //el receptor se ocupa con un carro y lo atiende calculando el tiemp
-    public void atenderCarro(Carro carro) {
-//        ocupado = true;
+    public boolean atenderCarro(Carro carro) {
+          boolean t = ocupado;
 //        carroAtendiendo = carro;
 //       
 //        
@@ -67,12 +67,18 @@ public class receptor {
         //no esta terminado 
         //long tiempoAtencion = finAtencion - inicioAtencion; // Calcula el tiempo de atención
         if(finAtencion == tiempoLan){
-            ocupado = true;
+            t = true;
         }else{
-            ocupado = false;
+            t = false;
         }
+        return t;
 //
 //        ocupado = false;
 //        carroAtendiendo = null;
     }
+
+    public void setOcupado(boolean ocupado) {
+        this.ocupado = ocupado;
+    }
+    
 }
