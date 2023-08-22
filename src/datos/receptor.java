@@ -13,6 +13,36 @@ public class receptor {
 
     private boolean ocupado;
     private Carro carroAtendiendo;
+    private int tiempoLan;
+
+    public receptor(boolean ocupado, Carro carroAtendiendo, int tiempoLan) {
+        this.ocupado = ocupado;
+        this.carroAtendiendo = carroAtendiendo;
+        this.tiempoLan = tiempoLan;
+    }
+
+    @Override
+    public String toString() {
+        return ocupado + "," + carroAtendiendo + "," + tiempoLan;
+    }
+
+    public Carro getCarroAtendiendo() {
+        return carroAtendiendo;
+    }
+
+    public void setCarroAtendiendo(Carro carroAtendiendo) {
+        this.carroAtendiendo = carroAtendiendo;
+    }
+
+    public int getTiempoLan() {
+        return tiempoLan;
+    }
+
+    public void setTiempoLan(int tiempoLan) {
+        this.tiempoLan = tiempoLan;
+    }
+    
+    
 
     public receptor() {
         this.ocupado = false;
@@ -27,7 +57,7 @@ public class receptor {
         ocupado = true;
         carroAtendiendo = carro;
        
-
+        
         try {
             Thread.sleep(carro.getTiempoLan() * 1000);//tiempo de demora del carro las mide en milisegundos
         } catch (InterruptedException e) {
@@ -35,7 +65,7 @@ public class receptor {
         }
         long finAtencion = System.currentTimeMillis(); // Marca el tiempo de fin de atención
         //no esta terminado 
-        long tiempoAtencion = finAtencion - inicioAtencion; // Calcula el tiempo de atención
+        //long tiempoAtencion = finAtencion - inicioAtencion; // Calcula el tiempo de atención
 
         ocupado = false;
         carroAtendiendo = null;
