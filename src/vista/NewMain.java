@@ -6,7 +6,6 @@
 package vista;
 
 import datos.Carro;
-import java.util.UUID;
 import modelo.Cola;
 import datos.receptor;
 import java.util.ArrayList;
@@ -16,10 +15,8 @@ import java.util.ArrayList;
  * @author Alejo-PC
  */
 public class NewMain {
-    
+
     public static void main(String[] args) {
-        // TODO code application logic here
-        Cola<Carro> colaCarros=new Cola<>();
+        Cola<Carro> colaCarros = new Cola<>();
     }
-    
 }
