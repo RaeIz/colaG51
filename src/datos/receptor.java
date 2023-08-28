@@ -5,25 +5,27 @@
  */
 package datos;
 
+import modelo.Base;
+
 /**
  *
  * @author reysa
  */
-public class receptor {
+public class receptor extends Base {
 
     private boolean ocupado;
     private Carro carroAtendiendo;
-    private int tiempoLan;
+    private int tiempoLanR;
 
     public receptor(boolean ocupado, Carro carroAtendiendo, int tiempoLan) {
         this.ocupado = ocupado;
         this.carroAtendiendo = carroAtendiendo;
-        this.tiempoLan = tiempoLan;
+        this.tiempoLanR = tiempoLan;
     }
 
     @Override
     public String toString() {
-        return ocupado + "," + carroAtendiendo + "," + tiempoLan;
+        return ocupado + "," + carroAtendiendo + "," + tiempoLanR;
     }
 
     public Carro getCarroAtendiendo() {
@@ -34,12 +36,12 @@ public class receptor {
         this.carroAtendiendo = carroAtendiendo;
     }
 
-    public int getTiempoLan() {
-        return tiempoLan;
+    public int getTiempoLanR() {
+        return tiempoLanR;
     }
 
-    public void setTiempoLan(int tiempoLan) {
-        this.tiempoLan = tiempoLan;
+    public void setTiempoLanR(int tiempoLanR) {
+        this.tiempoLanR = tiempoLanR;
     }
     
     
@@ -52,33 +54,16 @@ public class receptor {
     public boolean isOcupado() {
         return ocupado;
     }
-    //el receptor se ocupa con un carro y lo atiende calculando el tiemp
-    public boolean atenderCarro(Carro carro) {
-          boolean t = ocupado;
-//        carroAtendiendo = carro;
-//       
-//        
-        try {
-            Thread.sleep(carro.getTiempoLan() * 1000);//tiempo de demora del carro las mide en milisegundos
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        long finAtencion = System.currentTimeMillis(); // Marca el tiempo de fin de atención
-        //no esta terminado 
-        //long tiempoAtencion = finAtencion - inicioAtencion; // Calcula el tiempo de atención
-        if(finAtencion == tiempoLan){
-            t = true;
-        }else{
-            t = false;
-        }
-        return t;
-//
-//        ocupado = false;
-//        carroAtendiendo = null;
-    }
+   
 
     public void setOcupado(boolean ocupado) {
         this.ocupado = ocupado;
     }
-    
+    @Override
+    public Base copy() {
+        
+        return new receptor(ocupado, carroAtendiendo, tiempoLanR);
+        
+        
+    }
 }

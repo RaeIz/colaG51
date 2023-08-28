@@ -8,7 +8,6 @@ package vista;
 import datos.Carro;
 import modelo.Cola;
 import datos.receptor;
-import java.util.ArrayList;
 
 /**
  *
@@ -18,5 +17,6 @@ public class NewMain {
 
     public static void main(String[] args) {
         Cola<Carro> colaCarros = new Cola<>();
+        
     }
 }
