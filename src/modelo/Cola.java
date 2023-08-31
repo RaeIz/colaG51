@@ -1,10 +1,11 @@
- /*
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 package modelo;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 
 /**
@@ -14,6 +15,7 @@ import java.util.LinkedList;
 public class Cola<T extends Base> {
 
     LinkedList<T> elems;
+    
 
     public Cola() {
         elems = new LinkedList<>();
@@ -29,6 +31,12 @@ public class Cola<T extends Base> {
 
     public boolean estaVacia() {
         return elems.isEmpty();
+    }
+
+  
+
+    public Iterator<T> iterator() {
+        return elems.iterator();
     }
 
     @Override
