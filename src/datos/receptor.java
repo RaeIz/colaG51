@@ -6,6 +6,7 @@
 package datos;
 
 import modelo.Base;
+import datos.Carro;
 
 /**
  *
@@ -14,25 +15,30 @@ import modelo.Base;
 public class receptor extends Base {
 
     private boolean ocupado;
-    private Carro carroAtendiendo;
+    private int carroAtendiendo;
     private int tiempoLanR;
+    private Carro cliente;
 
-    public receptor(boolean ocupado, Carro carroAtendiendo, int tiempoLan) {
+    public receptor(boolean ocupado, int carroAtendiendo, int tiempoLanR, Carro cliente) {
         this.ocupado = ocupado;
         this.carroAtendiendo = carroAtendiendo;
-        this.tiempoLanR = tiempoLan;
+        this.tiempoLanR = tiempoLanR;
+        this.cliente = cliente;
     }
+    
+    
+   
 
     @Override
     public String toString() {
         return ocupado + "," + carroAtendiendo + "," + tiempoLanR;
     }
 
-    public Carro getCarroAtendiendo() {
+    public int getCarroAtendiendo() {
         return carroAtendiendo;
     }
 
-    public void setCarroAtendiendo(Carro carroAtendiendo) {
+    public void setCarroAtendiendo(int carroAtendiendo) {
         this.carroAtendiendo = carroAtendiendo;
     }
 
@@ -48,7 +54,6 @@ public class receptor extends Base {
 
     public receptor() {
         this.ocupado = false;
-        this.carroAtendiendo = null;
     }
 
     public boolean isOcupado() {
@@ -62,7 +67,7 @@ public class receptor extends Base {
     @Override
     public Base copy() {
         
-        return new receptor(ocupado, carroAtendiendo, tiempoLanR);
+        return new receptor(ocupado, carroAtendiendo, tiempoLanR, cliente);
         
         
     }
