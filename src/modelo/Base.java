@@ -6,9 +6,11 @@
 package modelo;
 
 /**
- *
- * @author Alejo-PC
- */
+ * grupo
+ * salomon David 
+ * Sebastian
+ * Juan Sebastial Bastidas 
+*/
 public abstract class Base {
     public abstract Base copy();
 }

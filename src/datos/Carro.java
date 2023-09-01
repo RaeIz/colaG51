@@ -8,10 +8,10 @@ package datos;
 import modelo.Base;
 
 /**
-* Descripción de la clase …
-* @author 
-* @date 18 Agosto2023
-* @version 1.0
+ * grupo
+ * salomon David 
+ * Sebastian
+ * Juan Sebastial Bastidas 
 */
 public class Carro extends Base{
     

@@ -9,9 +9,11 @@ import modelo.Base;
 import datos.Carro;
 
 /**
- *
- * @author reysa
- */
+ * grupo
+ * salomon David 
+ * Sebastian
+ * Juan Sebastial Bastidas 
+*/
 public class receptor extends Base {
 
     private boolean ocupado;

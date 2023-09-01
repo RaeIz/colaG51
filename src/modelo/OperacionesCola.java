@@ -8,9 +8,11 @@ package modelo;
 import datos.Carro;
 
 /**
- *
- * @author sebastian.rivas
- */
+ * grupo
+ * salomon David 
+ * Sebastian
+ * Juan Sebastial Bastidas 
+*/
 public class OperacionesCola <T extends Base> {
     
     public static <T extends Base> Cola <T> duplicarCola(Cola<T> C01){

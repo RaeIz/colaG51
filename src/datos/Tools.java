@@ -10,9 +10,11 @@ import modelo.OperacionesCola;
 
 
 /**
- *
- * @author Alejo-PC
- */
+ * grupo
+ * salomon David 
+ * Sebastian
+ * Juan Sebastial Bastidas 
+*/
 public class Tools {
     /**
      * Metodo que recibe una cola y convierte su contenido en un documento en formato

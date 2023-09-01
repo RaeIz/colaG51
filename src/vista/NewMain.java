@@ -10,9 +10,11 @@ import modelo.Cola;
 import datos.receptor;
 
 /**
- *
- * @author Alejo-PC
- */
+ * grupo
+ * salomon David 
+ * Sebastian
+ * Juan Sebastial Bastidas 
+*/
 public class NewMain {
 
     public static void main(String[] args) {

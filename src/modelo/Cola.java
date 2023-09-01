@@ -9,9 +9,11 @@ import java.util.Iterator;
 import java.util.LinkedList;
 
 /**
- *
- * @author Alejo-PC
- */
+ * grupo
+ * salomon David 
+ * Sebastian
+ * Juan Sebastial Bastidas 
+*/
 public class Cola<T extends Base> {
 
     LinkedList<T> elems;
